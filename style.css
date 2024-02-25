@@ -1,0 +1,371 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.main {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.allproducts {
+    flex: 1;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: -60px;
+    margin-right: 10px;
+}
+
+.total {
+    width: 20%;
+    background-color: #e6e6e6;
+    padding: 20px;
+    margin-top: -60px;
+}
+
+.allproducts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product h4 {
+    margin: 10px 0;
+}
+
+.product button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order {
+    display: flex;
+    align-items: center;
+}
+
+.order img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search,
+.price-filter {
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.search input[type="text"],
+.price-filter input[type="number"],
+.search button,
+.price-filter button,
+#resetSearch,
+#resetButton {
+    margin-right: 10px;
+}
+
+.search input[type="text"],
+.price-filter input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    transition: border-color 0.3s ease;
+}
+
+.search input[type="text"]:focus,
+.price-filter input[type="number"]:focus {
+    border-color: #555;
+}
+
+.search button,
+.price-filter button,
+#resetSearch,
+#resetButton {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover,
+.price-filter button:hover,
+#resetSearch:hover,
+#resetButton:hover {
+    background-color: #555;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+@media only screen and (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px);
+    }
+
+    .total,
+    .allproducts {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .filter-container {
+        flex-direction: column;
+    }
+
+    .search,
+    .price-filter {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 330px) {
+
+    .filter-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .search,
+    .price-filter {
+        padding: 10px;
+        text-align: center;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .price-filter label {
+        display: none;
+    }
+
+    .search input[type="text"],
+    .price-filter input[type="number"],
+    .search button,
+    .price-filter button,
+    #resetSearch,
+    #resetButton {
+        margin-right: 10px;
+    }
+
+    .search input[type="text"],
+    .price-filter input[type="number"] {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        flex: 1;
+        transition: border-color 0.3s ease;
+        width: 100%;
+    }
+
+    .search input[type="text"]:focus,
+    .price-filter input[type="number"]:focus {
+        border-color: #555;
+    }
+
+    .search button,
+    .price-filter button,
+    #resetSearch,
+    #resetButton {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .search button:hover,
+    .price-filter button:hover,
+    #resetSearch:hover,
+    #resetButton:hover {
+        background-color: #555;
+    }
+
+}
+
+.plus,
+.minus {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plus:hover,
+.minus:hover {
+    background-color: #555;
+}
+
+@media only screen and (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px);
+    }
+
+    .total,
+    .allproducts {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .filter-container {
+        flex-direction: column;
+    }
+
+    .search,
+    .price-filter {
+        margin-bottom: 10px;
+    }
+
+    .price-filter label {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .filter-container {
+        flex-direction: column;
+    }
+
+    .search,
+    .price-filter {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .price-filter label {
+        display: none;
+    }
+
+    .search input[type="text"],
+    .price-filter input[type="number"] {
+        width: calc(70% - 5px);
+        margin-right: 5px;
+    }
+
+    .search button,
+    .price-filter button,
+    #resetSearch,
+    #resetButton {
+        width: calc(30% - 5px);
+    }
+}
+
+button#scrollToTop,
+button#scrollToBottom {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s ease;
+}
+
+button#scrollToTop:hover,
+button#scrollToBottom:hover {
+    background-color: #555;
+}
+
+@media only screen and (max-width: 768px) {
+
+    button#scrollToTop,
+    button#scrollToBottom {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 9999;
+        transition: background-color 0.3s ease;
+        font-size: 14px;
+    }
+
+    button#scrollToTop:hover,
+    button#scrollToBottom:hover {
+        background-color: #555;
+    }
+
+}
