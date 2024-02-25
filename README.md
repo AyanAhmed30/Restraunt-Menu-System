@@ -1,1 +1,3 @@
 Welcome to the Restaurant Management System project! This system allows users to view a variety of food items available on the menu, add them to the order, and calculate the total price. It provides features like searching for specific items, filtering by price range, and easy navigation with scroll buttons. The project utilizes HTML, CSS, and JavaScript, along with SweetAlert for notifications. Simply clone the repository, open the `index.html` file, and start managing your restaurant's menu efficiently! Feel free to contribute to the project by submitting bug fixes or enhancements through pull requests.
+
+SITE url: https://restraunts-pos.netlify.app/
